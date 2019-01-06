@@ -1,7 +1,8 @@
 import React from 'react';
 
 
-const SeasonDisplay = () => {
+const SeasonDisplay = (props) => {
+
 return <div>Season Displays</div>
 };
 
