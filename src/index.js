@@ -10,9 +10,8 @@ class App extends React.Component {
             long: null,
             errorMessage: ''
         };
-    }
-    //Need render method 
-    render() {
+    } 
+    componentDidMount() {
         window.navigator.geolocation.getCurrentPosition(
             position => {
                 this.setState({
@@ -28,17 +27,18 @@ class App extends React.Component {
                 });
             }
         );
-        return <div > Latitude: {
-                this.state.lat
-            }, Longtitude: {
-                this.state.long
-            }
-            <br />
-            Error:{this.state.errorMessage}
-            </div>
-    }
 }
+//Need render method
+render(){
+    if (this.state.errorMessage && !this.state.lat){
+        return <div>Error: {this.state.errorMessage}</div>
+    }
 
-ReactDOM.render( <
-    App / > , document.querySelector('#root')
-);
+    if(!this.state.errorMessage && this.state.lat){
+        return <div>Latitude:{this.state.lat}</div>
+    }
+
+    return <div>Loading!</div>
+}
+}
+ReactDOM.render(<App/>,document.querySelector('#root'));
