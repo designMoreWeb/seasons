@@ -7,7 +7,7 @@ const seasonConfig={
         iconName: 'sun'
     },
     Winter:{
-        text: 'Knits & Jackets! hoodie season has hit us's,
+        text: 'Knits & Jackets! hoodie season has hit us',
         iconName:'snowflake'
     }
 };
