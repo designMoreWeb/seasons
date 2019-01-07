@@ -21,7 +21,7 @@ render(){
         return <SeasonDisplay lat={this.state.lat} />
     }
 
-    return <div>Loading!</div>
-}
+    return <div>Loading!</div>;
+    }
 }
 ReactDOM.render(<App/>,document.querySelector('#root'));
