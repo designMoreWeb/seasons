@@ -23,7 +23,7 @@ render(){
         return <SeasonDisplay lat={this.state.lat} />
     }
 
-    return <Spinner />;
+    return <Spinner message="Please accept loaction request" />;
     }
 }
 ReactDOM.render(<App/>,document.querySelector('#root'));
